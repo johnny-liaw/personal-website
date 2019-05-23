@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <LeftPanel />
+    <RightPanel />
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import LeftPanel from './components/LeftPanel.vue'
+import RightPanel from './components/RightPanel.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    HelloWorld,
+    LeftPanel, 
+    RightPanel
   }
 }
 </script>
@@ -23,6 +27,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+
 }
+
+
 </style>
