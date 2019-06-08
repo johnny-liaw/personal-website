@@ -3,19 +3,17 @@
         <h1>
             Hello,<br />I'm Johnny
         </h1>
-        <HeadShot id="headShot"/>
+        <HeadShot class="headShot"/>
     </div>
 </template>
 
 <script>
 import HeadShot from '../LeftPanelComponents/HeadShot.vue'
 
+
 export default {
     components: {
         HeadShot
-    },
-    props: {
-        msg: "hello world"
     },
     data: function() {
         return {
@@ -30,16 +28,25 @@ export default {
 div {
     
     text-align: right;
+    padding-right: 20%;
     width: 45vw;
     height: 100vh;
     float: left;
+    
     /*border: 1px solid rgb(86, 180, 239); */
  
 }
 
 h1 {
     padding-top: 10%;
-    font-size: 70px;
+    padding-bottom: 5%;
+    font-size: 80px;
 }
+
+.headShot {
+    margin-top: 15px;
+}
+
+
 
 </style>
