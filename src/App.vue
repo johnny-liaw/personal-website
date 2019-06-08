@@ -1,33 +1,32 @@
 <template>
-  <v-app>
-    <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
-    </v-toolbar>
+  <v-app style="overflow: hidden; height: 100vh">
+    <v-container>
+      <v-layout row wrap>
 
-    <v-content>
-      <HelloWorld/>
-    </v-content>
+        <v-flex xs12 sm6 md6>
+          <LeftPanel />
+        </v-flex>
+        <v-flex xs12 sm6 md6>
+          <RightPanel />
+        </v-flex>
+
+      </v-layout> 
+    </v-container>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+
+import LeftPanel from './components/LeftPanel.vue'
+import RightPanel from './components/RightPanel.vue'
+import CountryFlag from 'vue-country-flag'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    LeftPanel, 
+    RightPanel
   },
   data () {
     return {
