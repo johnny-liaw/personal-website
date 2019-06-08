@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>I'm a Web Developer and Deep Learning Engineer </h2>
+        <h2>I'm a Web Developer, Deep Learning Engineer and Space Nerd</h2>
         <h2>I Co-Founded DeepNeuron, Monash University's AI Research Laboratory</h2>
         <h2>I'm an Engineer on the Nova Rover Team. We're the first team in the southern hemisphere to qualify 
             and compete our Mars Rover at the University Rover Challenge, 
@@ -8,8 +8,8 @@
         </h2>
         <h2>I also surf, travel and ponder about the future of AI</h2>
 
-        <span v-for="country in countries">
-            <country-flag v-bind:country='country' size='big'/>
+        <span v-for='country in countries'>
+            <country-flag v-bind:country="country" size='big'/>
         </span>
     </div>
 </template>

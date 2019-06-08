@@ -1,36 +1,33 @@
 <template>
     <div>
         <div class="nav-buttons">
-            <v-btn flat v-on:click="pageToShow = 'About'">About</v-btn>
-            <v-btn flat v-on:click="pageToShow = 'Projects'">Projects</v-btn>
-            <v-btn flat v-on:click="pageToShow = 'Interests'">Interests</v-btn>
-            <v-btn flat v-on:click="pageToShow = 'Travel'">Travel</v-btn>
-            <v-btn flat v-on:click="pageToShow = 'Resume'">Resume</v-btn>
+            <v-btn flat outline ripple round v-on:click="pageToShow = 'About'">About</v-btn>
+            <v-btn flat outline ripple round v-on:click="pageToShow = 'Nova'">Nova Rover</v-btn>
+            <v-btn flat outline ripple round v-on:click="pageToShow = 'AI'">AI Research</v-btn>
+            <v-btn flat outline ripple round v-on:click="pageToShow = 'Web'">Web-dev Projects</v-btn>
         </div>
 
         <About class="content-card" v-show="pageToShow == 'About'"/>
-        <Interests class="content-card" v-show="pageToShow == 'Interests'" />
-        <Projects class="content-card" v-show="pageToShow == 'Projects'" />
-        <Resume class="content-card" v-show="pageToShow == 'Resume'" />
-        <Travel class="content-card" v-show="pageToShow == 'Travel'" />
+        <AI class="content-card" v-show="pageToShow == 'AI'" />
+        <Nova class="content-card" v-show="pageToShow == 'Nova'" />
+        <Webdev class="content-card" v-show="pageToShow == 'Web'" />
     </div>
 </template>
 
 
 <script>
 import About from '../RightPanelComponents/About.vue';
-import Interests from '../RightPanelComponents/Interests.vue';
+import AI from '../RightPanelComponents/AI.vue';
 import Resume from '../RightPanelComponents/Resume.vue';
-import Projects from '../RightPanelComponents/Projects.vue';
-import Travel from '../RightPanelComponents/Travel.vue';
+import Nova from '../RightPanelComponents/Nova.vue';
+import Webdev from '../RightPanelComponents/Webdev.vue';
 
 export default {
     components: {
         About, 
-        Interests, 
-        Resume, 
-        Projects, 
-        Travel
+        AI, 
+        Nova, 
+        Webdev
     }, 
     data() {
         return {
