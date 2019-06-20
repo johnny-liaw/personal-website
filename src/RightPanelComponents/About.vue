@@ -8,7 +8,7 @@
         </h2>
         <h2>I also surf, travel and ponder about the future of AI</h2>
 
-        <span v-for='country in countries'>
+        <span v-for='country in countries' :key="country.id">
             <country-flag v-bind:country="country" size='big'/>
         </span>
     </div>

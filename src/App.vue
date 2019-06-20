@@ -1,32 +1,50 @@
 <template>
-  <v-app style="overflow: hidden; height: 100vh">
-    <v-container>
-      <v-layout row wrap>
+<!--
+  <section class="hero is-fullheight">
+    <div class="hero-head">
+        <h1 class="title is-size-1 is-family-sans-serif">Hi. I'm Johnny.</h1>
+        <h2 class="subtitle">Deep Learning Engineer | Web Developer | Space Nerd</h2>
+        <Tags />
+    </div>
+  </section>
+-->
 
-        <v-flex xs12 sm6 md6>
-          <LeftPanel />
-        </v-flex>
-        <v-flex xs12 sm6 md6>
-          <RightPanel />
-        </v-flex>
+<section class="hero is-fullheight-with-navbar">
+      <div class="columns is-vcentered" style="height: 100vh">
+          <div class="column has-text-centered is-two-fifths">
+            <h1 class="title is-size-1 is-family-sans-serif">Hi. I'm Johnny.</h1>
+            <h2 class="subtitle">
+              Deep Learning Engineer<br>
+              Web Developer<br>
+              Space Nerd
+            </h2>
+            <Tags />
+        </div>
+        <div class="column is-flex-mobile">
+          <Card class="is-hidden-tablet" :color="'is-primary'" isMobile="true"/>
+          <Card class="is-hidden-mobile" :color="'is-danger'"/>
+        </div>
+      </div>
+</section>
 
-      </v-layout> 
-    </v-container>
-  </v-app>
+
 </template>
 
 <script>
+/* eslint-disable */
 
 import LeftPanel from './components/LeftPanel.vue'
 import RightPanel from './components/RightPanel.vue'
-import CountryFlag from 'vue-country-flag'
-
+import Tags from './components/Tags.vue'
+import Card from './components/Card.vue'
+import Headshot from './LeftPanelComponents/HeadShot.vue'
 
 export default {
   name: 'App',
   components: {
-    LeftPanel, 
-    RightPanel
+    Tags,
+    Headshot,
+    Card
   },
   data () {
     return {
@@ -35,3 +53,14 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+column {
+  display: flex
+}
+.image {
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+</style>
