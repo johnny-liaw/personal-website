@@ -2,11 +2,13 @@ import Vue from 'vue'
 import './plugins/vuetify'
 import App from './App.vue'
 import '@/assets/main.scss'
+import { store } from './store/store'
 // import '@/assets/debug.css'
 
 Vue.config.productionTip = false
 
 
 new Vue({
-  render: h => h(App),
+  store,
+  render: h => h(App)
 }).$mount('#app')
