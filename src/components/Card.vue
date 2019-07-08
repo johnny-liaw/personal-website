@@ -1,10 +1,8 @@
 <template>
-    <div id="infoCard" :class="['card', 'notification', color]">
-        <div class="card-content is-paddingless">
-            <p class="title">
-                {{getContent(title)}}
-            </p>
-        </div>
+    <div id="infoCard" :class="['notification', color]" style="max-width: 310px">
+        <p class="title">
+            {{getContent(title)}} 
+        </p>
     </div>
 </template>
 
@@ -28,7 +26,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
 
 </style>

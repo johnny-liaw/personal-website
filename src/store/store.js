@@ -12,7 +12,7 @@ export const store = new Vuex.Store({
             },
             {
                 title: "NovaRover",
-                para: "Software Engineer @ Nova Rover, an engineering team building a prototype Mars Rover."
+                para: "Software Engineer @ Nova Rover, building a prototype Mars Rover."
             },
             {
                 title: "GLH",
@@ -20,7 +20,7 @@ export const store = new Vuex.Store({
             },
             {
                 title: "Infocentric",
-                para: "Developer @ Infocentric"
+                para: "Software Engineer @ Alex"
             }
         ]
     },

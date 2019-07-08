@@ -1,12 +1,12 @@
 <template>
   <div class="grid-parent ">
-    <div id="intro">
-      <Intro />
+    <div id="intro" >
+      <Intro class="Intro"/>
     </div>
-    <div id="resume">
-      <Card id="dn" color="is-danger" title="NovaRover" />
+    <div id="resume" class="Resume">
+      <Card id="dn" color="is-danger" title="NovaRover"/>
       <Card id="nr" color="is-info" title="DeepNeuron" />
-      <Card id="glh" color="is-warning" title="GLH" />
+      <Card id="glh" color="is-warning" title="GLH" class="has-text-black" />
       <Card id="ic" color="is-dark" title="Infocentric" />
     </div>
   </div>
@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
 #intro { grid-area: intro; }
 #resume { grid-area: resume; }
@@ -48,6 +48,7 @@ export default {
   align-items: center;
   height: 100vh;
   display: grid;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas: 
     "intro resume";
 }
@@ -55,24 +56,41 @@ export default {
     .grid-parent {
         margin-top: 20px;
         max-height: 250px;
+        grid-template-columns: 1fr;
         grid-template-areas:
             "intro"
             "resume";
     }
 }
 
+
+
 /* == == == == intro CSS == == == == */
 #intro {
-  text-align: center;
-  color: #584A65;
+  text-align: right;
+  color: black;
+  margin-right: 5%;
+  /* color: #584A65; */
+}
+@media (max-width: 512px) {
+    .Intro {
+      text-align: center;
+    }
 }
 
 /* == == == == resume CSS == == == == */
-#resume {
-  display: grid;
-  grid-template-areas: 
-    "dn ic"
-    "nr glh";
-  padding: 20px;
+.Resume {
+  margin-left: 5%;
 }
+@media (max-width: 512px) {
+    .Resume {
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+
+
+
+
+
 </style>
