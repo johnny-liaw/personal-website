@@ -1,6 +1,7 @@
 <template>
     <div>
-        <span class="intro-title"><span style="font-size: 0.5em">Hi,</span> I'm Johnny.</span>
+        <span style="font-size: 2.5em; font-weight: 700px">Hi,</span>
+        <span class="intro-title"> I'm Johnny.</span>
         <h2 class="intro-subtitle">
             Deep Learning Engineer<br>
             Web Developer<br>
